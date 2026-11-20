@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 
-const app=express(); app.use(express.json({limit:'100kb'})); app.use(express.static('public'));
+const app=express(); app.use(express.json({limit:'100kb'})); app.use(express.static('.'));
 const PORT=process.env.PORT||3000;
 const DB=process.env.DATA_FILE||'./data.json';
 const defaults=[
